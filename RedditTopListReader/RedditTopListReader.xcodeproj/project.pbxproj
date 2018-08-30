@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88B3AEA0213873D80041840C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AE9F213873D80041840C /* AppDelegate.swift */; };
-		88B3AEA2213873D80041840C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEA1213873D80041840C /* ViewController.swift */; };
+		88B3AEA2213873D80041840C /* TopListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEA1213873D80041840C /* TopListTableViewController.swift */; };
 		88B3AEA5213873D80041840C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B3AEA3213873D80041840C /* Main.storyboard */; };
 		88B3AEA7213873D80041840C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B3AEA6213873D80041840C /* Assets.xcassets */; };
 		88B3AEAA213873D80041840C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B3AEA8213873D80041840C /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		88B3AE9C213873D80041840C /* RedditTopListReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditTopListReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B3AE9F213873D80041840C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88B3AEA1213873D80041840C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88B3AEA1213873D80041840C /* TopListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListTableViewController.swift; sourceTree = "<group>"; };
 		88B3AEA4213873D80041840C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88B3AEA6213873D80041840C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88B3AEA9213873D80041840C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,8 +77,10 @@
 		88B3AE9E213873D80041840C /* RedditTopListReader */ = {
 			isa = PBXGroup;
 			children = (
+				88B3AEC1213874E80041840C /* PresentationLayer */,
+				88B3AEC0213874E20041840C /* Model */,
+				88B3AEBF213874D00041840C /* ServiceLayer */,
 				88B3AE9F213873D80041840C /* AppDelegate.swift */,
-				88B3AEA1213873D80041840C /* ViewController.swift */,
 				88B3AEA3213873D80041840C /* Main.storyboard */,
 				88B3AEA6213873D80041840C /* Assets.xcassets */,
 				88B3AEA8213873D80041840C /* LaunchScreen.storyboard */,
@@ -94,6 +96,36 @@
 				88B3AEB6213873D80041840C /* Info.plist */,
 			);
 			path = RedditTopListReaderTests;
+			sourceTree = "<group>";
+		};
+		88B3AEBF213874D00041840C /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		88B3AEC0213874E20041840C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88B3AEC1213874E80041840C /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				88B3AEC2213874F20041840C /* TopPosts */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		88B3AEC2213874F20041840C /* TopPosts */ = {
+			isa = PBXGroup;
+			children = (
+				88B3AEA1213873D80041840C /* TopListTableViewController.swift */,
+			);
+			path = TopPosts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88B3AEA2213873D80041840C /* ViewController.swift in Sources */,
+				88B3AEA2213873D80041840C /* TopListTableViewController.swift in Sources */,
 				88B3AEA0213873D80041840C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
