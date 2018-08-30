@@ -20,6 +20,8 @@
 		88B3AECC213879130041840C /* TopListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B3AECB213879130041840C /* TopListTableViewCell.xib */; };
 		88B3AECE213879260041840C /* TopListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AECD213879260041840C /* TopListTableViewCell.swift */; };
 		88B3AED1213879EC0041840C /* NSDate+AgoConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AED0213879EC0041840C /* NSDate+AgoConverter.swift */; };
+		88B3AED3213890DF0041840C /* ImageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AED2213890DF0041840C /* ImageServiceProtocol.swift */; };
+		88B3AED5213890FC0041840C /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AED4213890FC0041840C /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		88B3AECB213879130041840C /* TopListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListTableViewCell.xib; sourceTree = "<group>"; };
 		88B3AECD213879260041840C /* TopListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListTableViewCell.swift; sourceTree = "<group>"; };
 		88B3AED0213879EC0041840C /* NSDate+AgoConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+AgoConverter.swift"; sourceTree = "<group>"; };
+		88B3AED2213890DF0041840C /* ImageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceProtocol.swift; sourceTree = "<group>"; };
+		88B3AED4213890FC0041840C /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 				88B3AEC5213876700041840C /* ServiceLocator.swift */,
 				88B3AEC7213876AB0041840C /* TopListServiceProtocol.swift */,
 				88B3AEC9213876D30041840C /* TopListService.swift */,
+				88B3AED2213890DF0041840C /* ImageServiceProtocol.swift */,
+				88B3AED4213890FC0041840C /* ImageService.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B3AED3213890DF0041840C /* ImageServiceProtocol.swift in Sources */,
 				88B3AECE213879260041840C /* TopListTableViewCell.swift in Sources */,
 				88B3AEC8213876AB0041840C /* TopListServiceProtocol.swift in Sources */,
+				88B3AED5213890FC0041840C /* ImageService.swift in Sources */,
 				88B3AEC6213876700041840C /* ServiceLocator.swift in Sources */,
 				88B3AEC4213875C00041840C /* Post.swift in Sources */,
 				88B3AEA2213873D80041840C /* TopListTableViewController.swift in Sources */,

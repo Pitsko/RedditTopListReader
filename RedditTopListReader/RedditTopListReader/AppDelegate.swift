@@ -44,8 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func initialize() {
+
         let topListService: TopListServiceProtocol = TopListService()
         ServiceLocator.registerService(topListService)
+
+        let imageService: ImageServiceProtocol = ImageService()
+        ServiceLocator.registerService(imageService)
 
     }
 }
