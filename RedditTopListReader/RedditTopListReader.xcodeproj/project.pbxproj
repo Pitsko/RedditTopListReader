@@ -14,6 +14,9 @@
 		88B3AEAA213873D80041840C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B3AEA8213873D80041840C /* LaunchScreen.storyboard */; };
 		88B3AEB5213873D80041840C /* RedditTopListReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEB4213873D80041840C /* RedditTopListReaderTests.swift */; };
 		88B3AEC4213875C00041840C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEC3213875C00041840C /* Post.swift */; };
+		88B3AEC6213876700041840C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEC5213876700041840C /* ServiceLocator.swift */; };
+		88B3AEC8213876AB0041840C /* TopListServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEC7213876AB0041840C /* TopListServiceProtocol.swift */; };
+		88B3AECA213876D30041840C /* TopListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEC9213876D30041840C /* TopListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		88B3AEB4213873D80041840C /* RedditTopListReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditTopListReaderTests.swift; sourceTree = "<group>"; };
 		88B3AEB6213873D80041840C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88B3AEC3213875C00041840C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		88B3AEC5213876700041840C /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		88B3AEC7213876AB0041840C /* TopListServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListServiceProtocol.swift; sourceTree = "<group>"; };
+		88B3AEC9213876D30041840C /* TopListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 		88B3AEBF213874D00041840C /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				88B3AEC5213876700041840C /* ServiceLocator.swift */,
+				88B3AEC7213876AB0041840C /* TopListServiceProtocol.swift */,
+				88B3AEC9213876D30041840C /* TopListService.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -232,9 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B3AEC8213876AB0041840C /* TopListServiceProtocol.swift in Sources */,
+				88B3AEC6213876700041840C /* ServiceLocator.swift in Sources */,
 				88B3AEC4213875C00041840C /* Post.swift in Sources */,
 				88B3AEA2213873D80041840C /* TopListTableViewController.swift in Sources */,
 				88B3AEA0213873D80041840C /* AppDelegate.swift in Sources */,
+				88B3AECA213876D30041840C /* TopListService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

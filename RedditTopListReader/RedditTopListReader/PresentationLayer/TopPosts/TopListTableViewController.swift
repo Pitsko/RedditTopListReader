@@ -10,9 +10,16 @@ import UIKit
 
 class TopListTableViewController: UITableViewController {
 
+    private var topListService: TopListServiceProtocol {
+        return ServiceLocator.getService()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        topListService.fetchTopList(limit: 10, after: nil) { (posts, error) in
+            print(posts)
+        }
     }
 
     override func didReceiveMemoryWarning() {
