@@ -25,6 +25,7 @@ class TopListTableViewCell: UITableViewCell {
     private var imageLoadingTask: URLSessionDataTask?
     private var post: Post?
 
+    // actually, I dont need to have this action set outside. But I believe controller should responsible for such logic and behavior. Opening of external browser should be not inside cell
     typealias ThumbnailClickClosure = ((_ post: Post) -> ())
     private var thumbnailTapped: ThumbnailClickClosure?
 
