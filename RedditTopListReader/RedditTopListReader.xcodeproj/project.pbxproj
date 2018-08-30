@@ -17,6 +17,9 @@
 		88B3AEC6213876700041840C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEC5213876700041840C /* ServiceLocator.swift */; };
 		88B3AEC8213876AB0041840C /* TopListServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEC7213876AB0041840C /* TopListServiceProtocol.swift */; };
 		88B3AECA213876D30041840C /* TopListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEC9213876D30041840C /* TopListService.swift */; };
+		88B3AECC213879130041840C /* TopListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B3AECB213879130041840C /* TopListTableViewCell.xib */; };
+		88B3AECE213879260041840C /* TopListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AECD213879260041840C /* TopListTableViewCell.swift */; };
+		88B3AED1213879EC0041840C /* NSDate+AgoConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AED0213879EC0041840C /* NSDate+AgoConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		88B3AEC5213876700041840C /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		88B3AEC7213876AB0041840C /* TopListServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListServiceProtocol.swift; sourceTree = "<group>"; };
 		88B3AEC9213876D30041840C /* TopListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListService.swift; sourceTree = "<group>"; };
+		88B3AECB213879130041840C /* TopListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListTableViewCell.xib; sourceTree = "<group>"; };
+		88B3AECD213879260041840C /* TopListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListTableViewCell.swift; sourceTree = "<group>"; };
+		88B3AED0213879EC0041840C /* NSDate+AgoConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+AgoConverter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 		88B3AE9E213873D80041840C /* RedditTopListReader */ = {
 			isa = PBXGroup;
 			children = (
+				88B3AECF213879D30041840C /* Utils */,
 				88B3AEC1213874E80041840C /* PresentationLayer */,
 				88B3AEC0213874E20041840C /* Model */,
 				88B3AEBF213874D00041840C /* ServiceLayer */,
@@ -136,8 +143,18 @@
 			isa = PBXGroup;
 			children = (
 				88B3AEA1213873D80041840C /* TopListTableViewController.swift */,
+				88B3AECB213879130041840C /* TopListTableViewCell.xib */,
+				88B3AECD213879260041840C /* TopListTableViewCell.swift */,
 			);
 			path = TopPosts;
+			sourceTree = "<group>";
+		};
+		88B3AECF213879D30041840C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				88B3AED0213879EC0041840C /* NSDate+AgoConverter.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +241,7 @@
 				88B3AEAA213873D80041840C /* LaunchScreen.storyboard in Resources */,
 				88B3AEA7213873D80041840C /* Assets.xcassets in Resources */,
 				88B3AEA5213873D80041840C /* Main.storyboard in Resources */,
+				88B3AECC213879130041840C /* TopListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,10 +259,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B3AECE213879260041840C /* TopListTableViewCell.swift in Sources */,
 				88B3AEC8213876AB0041840C /* TopListServiceProtocol.swift in Sources */,
 				88B3AEC6213876700041840C /* ServiceLocator.swift in Sources */,
 				88B3AEC4213875C00041840C /* Post.swift in Sources */,
 				88B3AEA2213873D80041840C /* TopListTableViewController.swift in Sources */,
+				88B3AED1213879EC0041840C /* NSDate+AgoConverter.swift in Sources */,
 				88B3AEA0213873D80041840C /* AppDelegate.swift in Sources */,
 				88B3AECA213876D30041840C /* TopListService.swift in Sources */,
 			);
