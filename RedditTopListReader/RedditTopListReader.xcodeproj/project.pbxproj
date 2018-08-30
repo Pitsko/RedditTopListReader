@@ -13,6 +13,7 @@
 		88B3AEA7213873D80041840C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B3AEA6213873D80041840C /* Assets.xcassets */; };
 		88B3AEAA213873D80041840C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B3AEA8213873D80041840C /* LaunchScreen.storyboard */; };
 		88B3AEB5213873D80041840C /* RedditTopListReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEB4213873D80041840C /* RedditTopListReaderTests.swift */; };
+		88B3AEC4213875C00041840C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3AEC3213875C00041840C /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		88B3AEB0213873D80041840C /* RedditTopListReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditTopListReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B3AEB4213873D80041840C /* RedditTopListReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditTopListReaderTests.swift; sourceTree = "<group>"; };
 		88B3AEB6213873D80041840C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88B3AEC3213875C00041840C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		88B3AEC0213874E20041840C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				88B3AEC3213875C00041840C /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B3AEC4213875C00041840C /* Post.swift in Sources */,
 				88B3AEA2213873D80041840C /* TopListTableViewController.swift in Sources */,
 				88B3AEA0213873D80041840C /* AppDelegate.swift in Sources */,
 			);
