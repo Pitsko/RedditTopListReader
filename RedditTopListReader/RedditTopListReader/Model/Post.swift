@@ -28,7 +28,7 @@ struct Post: Decodable {
     let name: String
     let author: String
     let title: String
-    let created: Date
+    let created_utc: Date
     
     let num_comments: Int
     let thumbnail: URL?

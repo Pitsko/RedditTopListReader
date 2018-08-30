@@ -16,7 +16,7 @@ class TopListService: TopListServiceProtocol {
     
     func fetchTopList(limit: Int, after: String? = nil, completion: @escaping (_ data: [Post]?, _ error: Error?) -> () ) {
         
-        var urlStirng = "\(Constants.baseURL)top.json?limit=\(limit)&t=day"
+        var urlStirng = "\(Constants.baseURL)top.json?limit=\(limit)&t=week"
         if let after = after  {
             urlStirng = urlStirng + "&after=\(after)"
         }
@@ -29,9 +29,11 @@ class TopListService: TopListServiceProtocol {
         let session = URLSession.shared
         
         session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
-            
+
+            // I think if I have more services, I will move all decode configuration out of this class, to make it reusable accross all services
             let decoder = JSONDecoder()
-            
+            decoder.dateDecodingStrategy = .secondsSince1970
+
             let response = try! decoder.decode(TopListServiceResponse.self, from: data!)
             
             let posts = response.data.children.map{$0.data}

@@ -33,7 +33,7 @@ class TopListTableViewCell: UITableViewCell {
         title.text = post.title
         author.text = post.author
         commentsCount.text = "\(post.num_comments) comms"
-        time.text = post.created.timeAgoFormat()
+        time.text = post.created_utc.timeAgoFormat()
         
         if let thumbnailURL = post.thumbnail {
             imageLoadingTask = imageService.loadImage(thumbnailURL) { [weak self](data, error) in

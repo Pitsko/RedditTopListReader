@@ -12,10 +12,10 @@ import Foundation
 private struct DateFormatters {
     static let timeAgo: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .full
+        formatter.calendar = Calendar.current
+        formatter.unitsStyle = .short
         formatter.zeroFormattingBehavior = .dropAll
         formatter.maximumUnitCount = 1
-        formatter.collapsesLargestUnit = true
         formatter.includesApproximationPhrase = false
         return formatter
     }()
@@ -24,7 +24,7 @@ private struct DateFormatters {
 
 extension Date {
     func timeAgoFormat () -> String {
-        let calendar = NSCalendar.current
+        let calendar = Calendar.current
         let components1: Set<Calendar.Component> = [.year, .month, .weekOfMonth, .day, .hour, .minute, .second]
         let components = calendar.dateComponents(components1, from: self, to: Date())
         
@@ -44,6 +44,7 @@ extension Date {
         } else if components.minute ?? 0 > 0 {
             formatter.allowedUnits = .minute
         } else {
+            print(self)
             formatter.allowedUnits = .second
         }
         
