@@ -9,7 +9,7 @@
 import XCTest
 @testable import RedditTopListReader
 
-class RedditTopListReaderTests: XCTestCase {
+class DateFormatterAgoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,16 +21,39 @@ class RedditTopListReaderTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testOneHourAgo() {
+        let oneHourAgoDate = Calendar.current.date(byAdding: .hour, value: -1, to: Date())!
+        XCTAssertEqual(oneHourAgoDate.timeAgoFormat(), "1 hr ago")
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testTwoDaysAgo() {
+        let date = Calendar.current.date(byAdding: .day, value: -2, to: Date())!
+        XCTAssertEqual(date.timeAgoFormat(), "2 days ago")
     }
-    
+
+    func testTenSecondsAgo() {
+        let date = Calendar.current.date(byAdding: .second, value: -10, to: Date())!
+        XCTAssertEqual(date.timeAgoFormat(), "10 sec ago")
+    }
+
+    func testOneWeekAgo() {
+        let date = Calendar.current.date(byAdding: .weekOfMonth, value: -1, to: Date())!
+        XCTAssertEqual(date.timeAgoFormat(), "1 wk ago")
+    }
+
+    func testTenYearsAgo() {
+        let date = Calendar.current.date(byAdding: .year, value: -10, to: Date())!
+        XCTAssertEqual(date.timeAgoFormat(), "10 yrs ago")
+    }
+
+    func testFiveMinitesAgo() {
+        let date = Calendar.current.date(byAdding: .minute, value: -5, to: Date())!
+        XCTAssertEqual(date.timeAgoFormat(), "5 min ago")
+    }
+
+    func testSixMonthAgo() {
+        let date = Calendar.current.date(byAdding: .month, value: -6, to: Date())!
+        XCTAssertEqual(date.timeAgoFormat(), "6 mths ago")
+    }
+
 }

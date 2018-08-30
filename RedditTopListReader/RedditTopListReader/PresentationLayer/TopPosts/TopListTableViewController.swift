@@ -49,6 +49,7 @@ class TopListTableViewController: UITableViewController {
     }
 
 
+    // MARK: TableViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,7 +77,7 @@ class TopListTableViewController: UITableViewController {
         fetchMorePostsIfNeeded(indexPath.row)
     }
     
-    
+    //MARK: Fetching data
     func fetchMorePostsIfNeeded(_ currentIndex: Int) {
         if currentIndex >= posts.count - 1 && loadingState == .idle {
             loadingState = .inProgress
