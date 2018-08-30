@@ -16,6 +16,9 @@ class ImageService: ImageServiceProtocol {
                 var image: UIImage?
                 if let data = data {
                     image = UIImage(data: data)
+                    
+                    // saving all images to gallery - accoridng to requirements
+                    image?.saveInGallery()
                 }
                 completion(image, error)
             }

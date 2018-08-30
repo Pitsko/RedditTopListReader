@@ -15,6 +15,12 @@ class TopListTableViewController: UITableViewController {
         static let portionSize: Int = 20
     }
 
+    private enum LoadingStatus {
+        case inProgress
+        case idle
+        case noMoreData
+    }
+
     private var topListService: TopListServiceProtocol {
         return ServiceLocator.getService()
     }
@@ -25,13 +31,6 @@ class TopListTableViewController: UITableViewController {
         activityIndicatorView.startAnimating()
         return activityIndicatorView
     }()
-    
-    
-    private enum LoadingStatus {
-        case inProgress
-        case idle
-        case noMoreData
-    }
     
     private var loadingState: LoadingStatus = .idle {
         didSet {
@@ -77,6 +76,7 @@ class TopListTableViewController: UITableViewController {
         fetchMorePostsIfNeeded(indexPath.row)
     }
     
+    
     func fetchMorePostsIfNeeded(_ currentIndex: Int) {
         if currentIndex >= posts.count - 1 && loadingState == .idle {
             loadingState = .inProgress
@@ -107,6 +107,18 @@ class TopListTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
 
-
 }
 
+extension TopListTableViewController {
+    // We can use these methods to decode/encode data for state restoration.  I am not sure what should be store/restored on this screen. last visible post and than load this post ot make visible first ?
+    // please let me know if I should finish it
+    override func encodeRestorableState(with coder: NSCoder) {
+        super.encodeRestorableState(with: coder)
+    }
+    
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+    }
+
+}
