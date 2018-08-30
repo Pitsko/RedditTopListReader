@@ -33,4 +33,21 @@ struct Post: Decodable {
     let num_comments: Int
     let thumbnail: URL?
     
+    let preview: Preview?
+
+}
+
+struct Preview: Decodable {
+    let images: [ImagePreview]
+}
+
+struct ImagePreview: Decodable {
+    let source: Image
+}
+
+struct Image: Decodable {
+    let url: URL
+    let width: Double
+    let height: Double
+    
 }

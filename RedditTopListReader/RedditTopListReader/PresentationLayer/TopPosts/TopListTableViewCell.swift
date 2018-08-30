@@ -23,13 +23,29 @@ class TopListTableViewCell: UITableViewCell {
     @IBOutlet private weak var thumbnail: UIImageView!
     
     private var imageLoadingTask: URLSessionDataTask?
+    private var post: Post?
+
+    typealias ThumbnailClickClosure = ((_ post: Post) -> ())
+    private var thumbnailTapped: ThumbnailClickClosure?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TopListTableViewCell.thumbnailTapped(gesture:)))
+        thumbnail.addGestureRecognizer(tapGesture)
     }
-    
-    func configure(post: Post) {
+
+    @objc func thumbnailTapped(gesture: UIGestureRecognizer) {
+        guard let post = post else {
+            return
+        }
+        thumbnailTapped!(post)
+    }
+
+    func configure(post: Post, thumbnailTapped: @escaping ThumbnailClickClosure ) {
+        self.post = post
+        self.thumbnailTapped = thumbnailTapped
+        
         title.text = post.title
         author.text = post.author
         commentsCount.text = "\(post.num_comments) comms"
@@ -57,6 +73,6 @@ class TopListTableViewCell: UITableViewCell {
         thumbnail.image = nil
         imageLoadingTask?.cancel()
         imageLoadingTask = nil
-
+        post = nil
     }
 }

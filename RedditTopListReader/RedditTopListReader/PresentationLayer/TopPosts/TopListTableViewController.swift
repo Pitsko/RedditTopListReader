@@ -63,7 +63,13 @@ class TopListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TopListTableViewCell.rIdentifier) as! TopListTableViewCell
-        cell.configure(post: posts[indexPath.row])
+        cell.configure(post: posts[indexPath.row], thumbnailTapped: { (post) in
+            let images = post.preview?.images
+            if let images = images, images.count > 0 {
+                let imageSourceURL = images[0].source.url
+                UIApplication.shared.open(imageSourceURL, options: [:], completionHandler: nil)
+            }
+        })
         return cell
     }
     
